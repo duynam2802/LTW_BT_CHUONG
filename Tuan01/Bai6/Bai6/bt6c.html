@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Date</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <style>
+    body {
+      padding: 20px;
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" /><br /><br />
+
+    <label for="phone">Telephone Number:</label><br />
+    <input type="text" id="phone" name="phone" /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" /><br /><br />
+
+    <label for="color">Favorite Color:</label><br />
+    <input type="color" id="color" name="color" value="#0000ff" /><br /><br />
+
+    <label for="dob">Date of Birth:</label><br />
+    <input type="text" id="dob" name="dob" value="2015-07-16" /><br /><br />
+
+    <button>Submit</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr("#dob", {
+      dateFormat: "Y-m-d",
+      defaultDate: "2015-07-16",
+      inline: true
+    });
+  </script>
+</body>
+</html>
