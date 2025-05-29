@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 20px auto;
+  border: 1px solid rgb(161, 81, 81);
+  padding: 20px;
+  max-width: 700px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+h1 {
+  text-align: center;
+  color: #933;
+  font-style: bold;
+  text-shadow: 5px 15px 7px #f2c2c2;
+}
+
+.navbar {
+  background-color: #bd6565;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  background: none;
+  padding: 0 10px;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: normal;
+  position: relative;
+}
+
+.navbar a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: rgb(6, 66, 232);
+}
+
+.navbar input {
+  flex: 1;
+  padding: 5px;
+}
+
+.section .h2 {
+  background-color: #f9f9e5;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: red;
+  font-weight: bold;
+}
+
+h2 {
+  color: #933;
+  background-color: #f9f9e5;
+}
