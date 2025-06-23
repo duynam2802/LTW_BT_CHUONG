@@ -1,0 +1,328 @@
+/* Các kiểu chung cho body */
+body {
+    font-family: Arial, sans-serif; /* Font chữ mặc định */
+    margin: 0; /* Loại bỏ lề mặc định của trình duyệt */
+    padding: 0; /* Loại bỏ khoảng đệm mặc định của trình duyệt */
+    background-color: #f0f0f0; /* Màu nền tổng thể của trang */
+    display: flex; /* Sử dụng Flexbox để căn giữa container */
+    justify-content: center; /* Căn giữa container theo chiều ngang */
+}
+
+/* Kiểu cho vùng chứa chính (container) */
+.container {
+    width: 960px; /* Chiều rộng cố định của nội dung trang. Bạn có thể thay đổi giá trị này */
+    background-color: #fff; /* Màu nền trắng cho container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ nhẹ cho container */
+    margin-top: 20px; /* Khoảng cách từ đỉnh trang */
+    margin-bottom: 20px; /* Khoảng cách từ cuối trang */
+    border-radius: 5px; /* Bo tròn các góc của container */
+    overflow: hidden; /* Quan trọng để các phần tử con (như ảnh nền) không tràn ra ngoài */
+}
+
+/* Kiểu cho phần header (đầu trang) */
+header {
+    background-color: #8B4513; /* Màu nâu đất cho nền header */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0, 0; /* Khoảng đệm trên, trái, phải (padding-bottom bằng 0 để menu nằm sát) */
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Sắp xếp các phần tử con (logo và menu) theo chiều dọc */
+}
+
+/* Kiểu cho phần trên của header (chứa logo) */
+.header-top {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    padding-bottom: 5px; /* Khoảng cách giữa logo và thanh điều hướng */
+    padding-left: 20px; /* Điều chỉnh vị trí logo so với lề trái */
+}
+
+/* Kiểu cho phần logo "AUTUMN TRAVEL COMPANY" */
+.logo {
+    font-size: 30px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    color: #FFD700; /* Màu vàng đồng cho chữ logo */
+    text-align: left; /* Căn chữ logo sang trái */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Thêm bóng cho chữ */
+}
+
+/* Kiểu cho phần chứa thanh điều hướng (menu) */
+.header-nav {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    background-color: #fff; /* Nền trắng cho thanh điều hướng */
+    padding: 10px 0; /* Khoảng đệm trên và dưới cho nền trắng của menu */
+    border-radius: 0 0 5px 5px; /* Bo tròn góc dưới bên trái và phải */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Tạo bóng đổ nhẹ để làm nổi thanh menu */
+}
+
+/* Kiểu cho danh sách các mục menu (Home, About, ...) */
+nav ul {
+    list-style: none; /* Bỏ dấu chấm đầu dòng của danh sách */
+    margin: 0; /* Bỏ lề mặc định */
+    padding: 0; /* Bỏ khoảng đệm mặc định */
+    display: flex; /* Sử dụng Flexbox để các mục nằm ngang hàng */
+    justify-content: flex-start; /* Căn các mục menu sang trái */
+    padding-left: 20px; /* Khoảng cách từ lề trái của thanh menu trắng */
+}
+
+/* Kiểu cho từng mục trong danh sách menu */
+nav ul li {
+    margin: 0 15px; /* Khoảng cách giữa các mục menu */
+}
+
+/* Kiểu cho liên kết trong từng mục menu */
+nav ul li a {
+    color: #8B4513; /* Màu chữ nâu cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-weight: bold; /* Chữ đậm */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu khi di chuột */
+}
+
+/* Kiểu khi di chuột qua liên kết menu */
+nav ul li a:hover {
+    color: #FFD700; /* Đổi màu thành vàng đồng khi di chuột */
+}
+/* Footer Styles (đã được cập nhật để chỉ hiển thị ảnh Spin.png) */
+.spin-footer {
+    width: 100%; /* Đảm bảo footer chiếm toàn bộ chiều rộng */
+    height: auto; /* Chiều cao tự động theo ảnh */
+    overflow: hidden; /* Đảm bảo ảnh nằm gọn trong footer */
+    background-color: transparent; /* Hoặc màu nền nếu ảnh Spin.png không trong suốt */
+}
+
+.spin-image {
+    width: 100%; /* Đảm bảo ảnh Spin.png chiếm toàn bộ chiều rộng của thẻ cha */
+    height: auto; /* Giữ nguyên tỉ lệ của ảnh Spin.png */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+}
+/* Kiểu cho banner trên cùng */
+.top-banner {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 150px; /* CHIỀU CAO CỐ ĐỊNH của banner. Bạn có thể thay đổi giá trị này */
+    /* Sử dụng ảnh chính 'image_c032b8.jpg' làm nền */
+    background: url('ảnh nè.png') no-repeat center center / cover; /* */
+    position: relative; /* Quan trọng để định vị ảnh lá bên trong */
+    overflow: hidden; /* Đảm bảo ảnh lá bên trong không tràn ra ngoài */
+}
+
+/* Kiểu cho dải lá trang trí dưới banner ('line.png') */
+.leaf-line {
+    position: absolute; /* Định vị tuyệt đối so với .top-banner */
+    bottom: -5px; /* Đẩy xuống dưới một chút để tạo hiệu ứng */
+    left: 0; /* Căn sang trái */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: auto; /* GIỮ NGUYÊN TỈ LỆ của ảnh. */
+    display: block;
+}
+
+/* Kiểu cho vùng nội dung chính */
+.main-content {
+    display: flex; /* Sử dụng Flexbox để chia 2 cột */
+    padding: 20px; /* Khoảng đệm bên trong vùng nội dung */
+    background-color: #f7f7f7; /* Màu nền hơi trắng ngà */
+}
+
+/* Kiểu cho cột bên trái (chứa form đăng ký) */
+.left-panel {
+    flex: 2; /* Chiếm 2 phần không gian (rộng hơn) */
+    padding-right: 20px; /* Khoảng cách với cột bên phải */
+}
+
+/* Kiểu cho tiêu đề h2 trong cột trái */
+.left-panel h2 {
+    color: #be9420; /* Màu nâu */
+    font-size: 22px; /* Kích thước chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+}
+
+/* Kiểu cho đoạn văn trong cột trái */
+.left-panel p {
+    color:#be9420;; /* Màu xám */
+    line-height: 1.6; /* Chiều cao dòng */
+    font-style: italic; /* Chữ in nghiêng */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+/* Kiểu cho nhóm form (label + input) */
+.signup-form .form-group {
+    margin-bottom: 15px; /* Khoảng cách giữa các nhóm trường nhập */
+}
+
+/* Kiểu cho nhãn (label) của form */
+.signup-form label {
+    display: block; /* Hiển thị dưới dạng khối để mỗi nhãn nằm trên một dòng riêng */
+    margin-bottom: 5px; /* Khoảng cách giữa nhãn và ô nhập */
+    font-weight: bold; /* Chữ đậm */
+    color: #333; /* Màu chữ */
+}
+
+/* Kiểu cho các ô nhập liệu (text, email, password) */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: calc(100% - 22px); /* Chiếm gần 100% chiều rộng, trừ đi padding và border */
+    padding: 10px; /* Khoảng đệm bên trong ô nhập */
+    border: 1px solid #ddd; /* Viền mỏng */
+    border-radius: 4px; /* Bo tròn góc */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+/* Kiểu cho nút "SIGN ME UP" */
+.sign-me-up-btn {
+    background-color: #c7a408; /* Màu nâu */
+    color: #fff; /* Màu chữ trắng */
+    padding: 12px 25px; /* Khoảng đệm nút */
+    border: none; /* Bỏ viền */
+    border-radius: 4px; /* Bo tròn góc */
+    font-size: 18px; /* Kích thước chữ */
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+/* Kiểu khi di chuột qua nút "SIGN ME UP" */
+.sign-me-up-btn:hover {
+    background-color: #A0522D; /* Màu nâu đậm hơn khi di chuột */
+}
+
+/* Kiểu cho cột bên phải */
+.right-panel {
+    flex: 1; /* Chiếm 1 phần không gian (hẹp hơn) */
+    background-color: #eee; /* Nền xám nhạt */
+    padding: 15px; /* Khoảng đệm bên trong */
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+/* Kiểu cho tiêu đề h3 trong cột phải */
+.right-panel h3 {
+    color: #8B4513; /* Màu nâu */
+    font-size: 18px; /* Kích thước chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    border-bottom: 1px solid #ccc; /* Đường kẻ dưới */
+    padding-bottom: 5px; /* Khoảng cách giữa chữ và đường kẻ */
+}
+
+/* Kiểu cho danh sách liên kết trong cột phải */
+.links-section ul {
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    margin: 0; /* Bỏ lề mặc định */
+    padding: 0; /* Bỏ khoảng đệm mặc định */
+
+    background-color: #F8F1E8; /* Màu cam/nâu rất nhạt từ ảnh mới */
+    padding: 10px 15px; /* Thêm padding cho vùng nền này */
+    border-radius: 5px; /* Bo tròn góc nếu muốn */
+}
+
+/* Kiểu cho từng mục liên kết để có dấu vuông */
+.links-section ul li {
+    margin-bottom: 8px; /* Khoảng cách giữa các liên kết */
+    position: relative; /* Quan trọng để định vị dấu vuông */
+    padding-left: 15px; /* Tạo khoảng trống cho dấu vuông */
+}
+
+/* Tạo dấu vuông bằng pseudo-element */
+.links-section ul li::before {
+    content: "\25A0"; /* Mã Unicode cho hình vuông nhỏ (◼) */
+    color: #DA9963; /* Màu cam/nâu cho dấu vuông */
+    font-size: 0.8em; /* Kích thước của dấu vuông */
+    position: absolute;
+    left: 0; /* Đặt dấu vuông ở lề trái của padding-left */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Dịch lên 50% chiều cao của nó để căn chính xác */
+}
+
+/* Kiểu cho liên kết trong cột phải */
+.links-section ul li a {
+    color: #DA9963; /* Màu cam/nâu cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+}
+
+/* Kiểu khi di chuột qua liên kết trong cột phải */
+.links-section ul li a:hover {
+    color: #C07B4F; /* Màu cam/nâu đậm hơn khi di chuột */
+    text-decoration: underline; /* Gạch chân khi di chuột */
+}
+
+/* Kiểu cho phần "More info" */
+.more-info-section {
+    margin-top: 20px; /* Khoảng cách từ phần trên */
+}
+
+/* Kiểu cho vùng chứa ảnh lá và đoạn văn trong "More info" */
+.more-info-section .info-content {
+    display: flex; /* Sử dụng Flexbox để xếp ảnh và chữ cạnh nhau */
+    align-items: flex-start; /* Căn ảnh và chữ từ trên xuống */
+}
+
+/* Kiểu cho ảnh lá trong "More info" ('leaf.png') */
+.info-leaf {
+    width: 100px; /* CHIỀU RỘNG của ảnh lá. Bạn có thể thay đổi giá trị này */
+    height: auto; /* GIỮ NGUYÊN TỈ LỆ của ảnh */
+    margin-right: 10px; /* Khoảng cách với đoạn văn */
+    flex-shrink: 0; /* Ngăn ảnh bị co lại khi không gian hạn chế */
+}
+
+/* Kiểu cho đoạn văn trong "More info" */
+.more-info-section p {
+    font-size: 14px; /* Kích thước chữ */
+    color: #666; /* Màu xám */
+    line-height: 1.5; /* Chiều cao dòng */
+}
+
+/* Kiểu cho footer (chân trang) độc đáo */
+.unique-footer {
+    background-color: #D2B48C; /* Màu nền tổng thể của footer (nâu nhạt) */
+    position: relative; /* Rất quan trọng: để định vị các ảnh con bằng position: absolute */
+    padding-bottom: 5px; /* Khoảng đệm nhỏ ở dưới cùng của footer */
+    overflow: hidden; /* Đảm bảo các phần tử được định vị tuyệt đối không tràn ra ngoài */
+}
+
+/* Vùng chứa dải lá trang trí ở footer */
+.footer-leaf-border {
+    position: relative; /* Để các ảnh lá con có thể định vị theo nó */
+    height: 40px; /* CHIỀU CAO của dải lá trang trí. Bạn có thể thay đổi giá trị này */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    overflow: hidden; /* Quan trọng để cắt các phần lá thừa không mong muốn */
+    background-color: transparent; /* Hoặc có thể đặt màu nền nhẹ nhàng cho dải lá */
+}
+
+/* Ảnh nền lá giữa của footer ('footer.png') */
+.footer-bg-leaves {
+    position: absolute; /* Định vị tuyệt đối */
+    top: 0; /* Căn lên trên cùng của .footer-leaf-border */
+    left: 0; /* Căn sang trái */
+    width: 100%; /* Kéo dài ảnh ra toàn bộ chiều rộng */
+    height: 100%; /* Phù hợp với chiều cao của .footer-leaf-border */
+    object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ vùng mà không bị biến dạng */
+    z-index: 1; /* Nằm dưới các ảnh lá góc */
+}
+
+/* Kiểu chung cho các ảnh lá ở góc (corner1.png, corner3.png) */
+.corner-leaf {
+    position: absolute; /* Định vị tuyệt đối */
+    height: 40px; /* CHIỀU CAO của ảnh lá góc. Bạn có thể thay đổi giá trị này */
+    width: auto; /* GIỮ NGUYÊN TỈ LỆ của ảnh */
+    z-index: 2; /* Nằm trên ảnh nền .footer-bg-leaves */
+}
+
+/* Định vị cụ thể cho ảnh lá góc trên bên trái ('corner1.png') */
+.corner-left-top {
+    top: 0;
+    left: 0;
+}
+
+/* Định vị cụ thể cho ảnh lá góc trên bên phải ('corner3.png') */
+.corner-right-top {
+    top: 0;
+    right: 0;
+}
+
+/* Vùng chứa nội dung bản quyền ở footer */
+.footer-content-area {
+    text-align: center; /* Căn giữa chữ */
+    color: #555; /* Màu chữ xám */
+    font-size: 14px; /* Kích thước chữ */
+    padding: 10px 20px; /* Khoảng đệm xung quanh chữ */
+    background-color: #D2B48C; /* Đảm bảo màu nền trùng với màu nền tổng thể của footer */
+    position: relative; /* Có thể dùng để đảm bảo nó nằm đúng lớp nếu có vấn đề z-index */
+    z-index: 0; /* Nằm dưới lớp dải lá trang trí */
+}
